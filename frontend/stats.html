@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="stylesheet" href="stats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx-style/0.8.13/xlsx-style.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>BIENVENUE CREA SUP DE VINCI</h1>
+            <nav>
+                <ul>
+                    <li><a href="welcome.html"><i class="fa-solid fa-house"></i> Accueil </a></li>
+                    <li><a href="mesdocuments.html"><i class="fas fa-folder"></i> Mes documents</a></li>
+                    <li><a href="corbeille.html"><i class="fas fa-trash"></i> Corbeille</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="header-bar">
+        <div class="header-item">
+            <label for="table-title">Titre:</label>
+            <input type="text" id="table-title" placeholder="Titre du tableau">
+        </div>
+        <div class="header-item">
+            <label for="entry-date">Date:</label>
+            <input type="date" id="entry-date">
+        </div>
+    </div>
+    <button id="export-document" class="exbtn"><i class="fa-solid fa-file-export"></i> Exporter</button>
+    <button id="export-document" class="exbtn"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+
+
+    <div class="table-container">
+        <table id="table1" class="data-table">
+            <thead>
+                <tr>
+                    <th>Membre</th>
+                    <th colspan="3">Leads</th>
+                    <th colspan="4">RDV</th>
+                    <th colspan="3">Admis</th>
+                    <th colspan="3">Inscrits</th>
+                    <th>DC</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td></td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>0</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>B1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>B3</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>M1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>TOTAL</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="table2" class="data-table">
+            <thead>
+                <tr>
+                    <th colspan="3">Affaires</th>
+                    <th colspan="3">Positionnements</th>
+                    <th colspan="4">Entretiens client</th>
+                    <th colspan="4">Affaires gagnées</th>
+                </tr>
+                <tr>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td>Taux de tranfo</td>
+                    <td>Objectif</td>
+                    <td>Réalisé</td>
+                    <td>%Atteinte</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="stats.js"></script>
+</body>
+</html>

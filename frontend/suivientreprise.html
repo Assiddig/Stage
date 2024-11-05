@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel-like Interface</title>
+    <link rel="stylesheet" href="suivientreprise.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx-style/0.8.13/xlsx-style.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>BIENVENUE CREA SUP DE VINCI</h1>
+            <nav>
+                <ul>
+                    <li><a href="welcome.html"><i class="fa-solid fa-house"></i> Accueil </a></li>
+                    <li><a href="mesdocuments.html"><i class="fas fa-folder"></i> Mes documents</a></li>
+                    <li><a href="corbeille.html"><i class="fas fa-trash"></i> Corbeille</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="header-bar">
+        <div class="header-item">
+            <label for="table-title">Titre:</label>
+            <input type="text" id="table-title" placeholder="Titre du tableau">
+        </div>
+        <div class="header-item">
+            <label for="entry-date">Date:</label>
+            <input type="date" id="entry-date">
+        </div>
+        <button id="add-member-button" class="btn"><i class="fa-solid fa-folder-plus"></i> Ajouter un contrat</button>
+    </div>
+    <button id="export-document" class="exbtn"><i class="fa-solid fa-file-export"></i> Exporter</button>
+    <button id="save-button" class="exbtn"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+
+
+    <div class="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nom contact</th>
+                    <th>Nom entreprise</th>
+                    <th>Téléphone</th>
+                    <th>Adresse mail</th>
+                    <th>Sources</th>
+                    <th>Formation concernée</th>
+                    <th>Commentaire</th>
+                    <th>Date de contact 1</th>
+                    <th>Positionnement 1</th>
+                    <th>Réponses étudiants 1</th>
+                    <th>Relance 1</th>
+                    <th>Date de contact 2</th>
+                    <th>Positionnement 2</th>
+                    <th>Réponses étudiants 2</th>
+                    <th>Relance 2</th>
+                    <th>Date de contact 3</th>
+                    <th>Positionnement 3</th>
+                    <th>Réponses étudiants 3</th>
+                    <th>Relance 3</th>
+                    <th>Date de contact 4</th>
+                    <th>Positionnement 4</th>
+                    <th>Réponses étudiants 4</th>
+                    <th>Relance 4</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Lignes du tableau générées par JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ajouter un membre</h2>
+            <form id="add-member-form">
+                <input type="text" id="nom-contact" name="nom-contact" placeholder="Nom contact" required>
+                <input type="text" id="nom-entreprise" name="nom-entreprise" placeholder="Nom entreprise" required>
+                <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+                <input type="email" id="adresse-mail" name="adresse-mail" placeholder="Adresse mail" required>
+                <input type="text" id="sources" name="sources" placeholder="Sources" required>
+                <input type="text" id="formation-concernee" name="formation-concernee" placeholder="Formation concernée" required>
+                <input type="text" id="commentaire" name="commentaire" placeholder="Commentaire" required>
+                <input type="date" id="date-contact-1" name="date-contact-1" placeholder="Date de contact 1">
+                <input type="text" id="positionnement-1" name="positionnement-1" placeholder="Positionnement 1">
+                <input type="text" id="reponses-etudiants-1" name="reponses-etudiants-1" placeholder="Réponses étudiants 1">
+                <input type="text" id="relance-1" name="relance-1" placeholder="Relance 1">
+                <input type="date" id="date-contact-2" name="date-contact-2" placeholder="Date de contact 2">
+                <input type="text" id="positionnement-2" name="positionnement-2" placeholder="Positionnement 2">
+                <input type="text" id="reponses-etudiants-2" name="reponses-etudiants-2" placeholder="Réponses étudiants 2">
+                <input type="text" id="relance-2" name="relance-2" placeholder="Relance 2">
+                <input type="date" id="date-contact-3" name="date-contact-3" placeholder="Date de contact 3">
+                <input type="text" id="positionnement-3" name="positionnement-3" placeholder="Positionnement 3">
+                <input type="text" id="reponses-etudiants-3" name="reponses-etudiants-3" placeholder="Réponses étudiants 3">
+                <input type="text" id="relance-3" name="relance-3" placeholder="Relance 3">
+                <input type="date" id="date-contact-4" name="date-contact-4" placeholder="Date de contact 4">
+                <input type="text" id="positionnement-4" name="positionnement-4" placeholder="Positionnement 4">
+                <input type="text" id="reponses-etudiants-4" name="reponses-etudiants-4" placeholder="Réponses étudiants 4">
+                <input type="text" id="relance-4" name="relance-4" placeholder="Relance 4">
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+    <script src="suivientreprise.js"></script>
+</body>
+</html>

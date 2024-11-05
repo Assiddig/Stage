@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recap Contrat</title>
+    <link rel="stylesheet" href="contrat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx-style/0.8.13/xlsx-style.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>BIENVENUE CREA SUP DE VINCI</h1>
+            <nav>
+                <ul>
+                    <li><a href="welcome.html"><i class="fa-solid fa-house"></i> Accueil </a></li>
+                    <li><a href="mesdocuments.html"><i class="fas fa-folder"></i> Mes documents</a></li>
+                    <li><a href="corbeille.html"><i class="fas fa-trash"></i> Corbeille</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="header-bar">
+        <div class="header-item">
+            <label for="table-title">Titre:</label>
+            <input type="text" id="table-title" placeholder="Titre du tableau">
+        </div>
+        <div class="header-item">
+            <label for="entry-date">Date:</label>
+            <input type="date" id="entry-date">
+        </div>
+        <button id="add-member-button" class="btn"><i class="fa-solid fa-folder-plus"></i> Ajouter un contrat</button>
+    </div>
+    <button id="export-document" class="exbtn"><i class="fa-solid fa-file-export"></i> Exporter</button>
+    <button id="export-document" class="exbtn"><i class="fa-solid fa-floppy-disk"></i> Enregistrer</button>
+
+
+    <div class="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>GRC OK</th>
+                    <th>Entreprise</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Formation</th>
+                    <th>Groupe</th>
+                    <th>Origine</th>
+                    <th>FDL envoyée</th>
+                    <th>Type</th>
+                    <th>Date placement</th>
+                    <th>Dernier établissement fréquenté</th>
+                    <th style="background-color: burlywood;">CA OPCO</th>
+                    <th style="background-color: rgb(192, 137, 137);">RAC</th>
+                    <th>FDL ok</th>
+                    <th style="background-color: gray;">RAC NEGOCIE</th>
+                    <th style="background-color: coral;">CA TOTAL</th>
+                    <th>Déclaration prime CA</th>
+                    <th>Déclaration Prime RAC</th>
+                </tr>
+                <tr class="header-row">
+                    <td colspan="11"></td>
+                    <td>Objectifs : 40 contrats</td>
+                    <td style="background-color: burlywood;"></td>
+                    <td style="background-color: rgb(192, 137, 137);"></td>
+                    <td></td>
+                    <td style="background-color: gray;"></td>
+                    <td style="background-color: coral;" rowspan="2"></td> <!-- Fusion -->
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="header-row">
+                    <td colspan="11"></td>
+                    <td>Avancée sur objectifs</td>
+                    <td style="background-color: burlywood;"></td>
+                    <td style="background-color: rgb(192, 137, 137);"></td>
+                    <td></td>
+                    <td style="background-color: gray;"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Lignes du tableau générées par JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ajouter un contrat</h2>
+            <form id="add-member-form">
+                <input type="text" id="grc-ok" name="grc-ok" placeholder="GRC OK" required>
+                <input type="text" id="entreprise" name="entreprise" placeholder="Entreprise" required>
+                <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+                <input type="text" id="formation" name="formation" placeholder="Formation" required>
+                <input type="text" id="groupe" name="groupe" placeholder="Groupe" required>
+                <input type="text" id="origine" name="origine" placeholder="Origine" required>
+                <input type="text" id="fdl-envoyee" name="fdl-envoyee" placeholder="FDL envoyée" required>
+                <input type="text" id="type" name="type" placeholder="Type" required>
+                <input type="date" id="date-placement" name="date-placement" placeholder="Date placement" required>
+                <input type="text" id="dernier-etablissement" name="dernier-etablissement" placeholder="Dernier établissement fréquenté" required>
+                <input type="text" id="ca-opco" name="ca-opco" placeholder="CA OPCO" required>
+                <input type="text" id="rac" name="rac" placeholder="RAC" required>
+                <input type="text" id="fdl-ok" name="fdl-ok" placeholder="FDL ok" required>
+                <input type="text" id="rac-negocie" name="rac-negocie" placeholder="RAC NEGOCIE" required>
+                <input type="text" id="ca-total" name="ca-total" placeholder="CA TOTAL" required>
+                <input type="text" id="declaration-prime-ca" name="declaration-prime-ca" placeholder="Déclaration prime CA" required>
+                <input type="text" id="declaration-prime-rac" name="declaration-prime-rac" placeholder="Déclaration Prime RAC" required>
+                <button type="submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+    <script src="contrat.js"></script>
+</body>
+</html>

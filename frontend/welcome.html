@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Example</title>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BIENVENUE CREA SUP DE VINCI</h1>
+            <nav>
+                <ul>
+                    <li><a href="welcome.html"><i class="fa-solid fa-house"></i> Accueil </a></li>
+                    <li><a href="mesdocuments.html"><i class="fas fa-folder"></i> Mes documents</a></li>
+                    <li><a href="corbeille.html"><i class="fas fa-trash"></i> Corbeille</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Déconnexion</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content">
+        <div class="titre">
+        <h2>Quel modèle souhaitez vous remplir? </h2>
+        </div>
+        <div class="button-container">
+            <button class="document-button" onclick="location.href='admission.html'">
+                <i class="fas fa-file-alt"></i> Recap Admission
+            </button>
+            <button class="document-button" onclick="location.href='contrat.html'">
+                <i class="fas fa-file-alt"></i> Recap Contrat
+            </button>
+            <button class="document-button" onclick="location.href='stats.html'">
+                <i class="fas fa-file-alt"></i> Statistiques
+            </button>
+            <button class="document-button" onclick="location.href='suivientreprise.html'">
+                <i class="fas fa-file-alt"></i> Suivi Entreprise
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        
+    </footer>
+    <script src="welcome.js"></script>
+</body>
+</html>
